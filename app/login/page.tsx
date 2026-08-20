@@ -1,0 +1,24 @@
+import Link from "next/link";
+import AuthForm from "@/components/auth/AuthForm";
+
+export default function LoginPage() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-slate-950 text-slate-50 px-6">
+      <div className="text-center">
+        <h1 className="text-2xl font-semibold tracking-tight">
+          Log in to VIA Hub
+        </h1>
+        <p className="text-slate-400 text-sm mt-1">Your way to learning.</p>
+      </div>
+
+      <AuthForm mode="login" />
+
+      <p className="text-sm text-slate-400">
+        Don&apos;t have an account?{" "}
+        <Link href="/signup" className="text-slate-50 underline underline-offset-2">
+          Sign up
+        </Link>
+      </p>
+    </main>
+  );
+}
